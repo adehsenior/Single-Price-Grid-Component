@@ -1,0 +1,111 @@
+body{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: hsl(204, 43%, 93%);
+    font-family: Karla;
+    
+}
+
+main{
+    display: grid;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.community{
+    background-color: #fff;
+    padding: 30px;
+}
+
+.subscription{
+    background-color: hsl(179, 62%, 43%);
+    padding: 30px;
+}
+
+.questions{
+    background-color: hsl(179, 63%, 48%);
+    padding: 30px;
+}
+
+h3{
+    color: hsl(179, 62%, 43%);
+}
+
+.community h4{
+    color: hsl(71, 73%, 54%);
+}
+
+.community p{
+   color: hsl(218, 22%, 67%); 
+   opacity: 70%;
+   line-height: 1.5;
+
+}
+
+h4{
+    color: #fff;
+}
+
+.subscription p, .questions p {
+    color: #fff;
+}
+
+h1{
+    color: #fff;
+}
+
+.cost{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button{
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+}
+
+.per-month p{
+    opacity: 60%;
+}
+
+
+@media (min-width:650px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        max-width: 600px;
+        height: 100%;
+        grid-template-areas: 
+        "community community"
+        "subscription questions";
+    }
+
+    .community{
+        grid-area: community;
+        height: 150px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .subscription{
+        grid-area: subscription;
+        height: 230px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .questions{
+        grid-area: questions;
+        height: 230px;
+        line-height:0.5;
+        border-bottom-right-radius: 5px;
+    }
+}
